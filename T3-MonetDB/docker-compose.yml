@@ -1,0 +1,11 @@
+services:
+  monetdb:
+    image: monetdb/monetdb:latest
+    container_name: taller3_database
+    ports:
+      - "50000:50000"
+    environment:
+      - MDB_DB_ADMIN_PASS=admin_pass
+      - MDB_CREATE_DBS=taller_db
+    volumes:
+      - ./data:/data
